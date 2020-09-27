@@ -1,9 +1,27 @@
 package com.orphynova.demo;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class LoginTests {
+
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("Method executed once before all methods");
+    }
+    @AfterClass
+    public void afterClass(){
+        System.out.println("Method executed once after class");
+    }
+    @AfterMethod
+    public void afterMethod(){
+        System.out.println("After method executed after all tests");
+    }
+
+    @BeforeMethod
+    public void beforemethod(){
+        System.out.println("Before Method executed prior to each test");
+    }
 
     @Test(priority = 1,testName = "VALID Credentials Login Test")
     public void logintest(){
