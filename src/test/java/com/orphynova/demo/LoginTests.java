@@ -15,9 +15,12 @@ public class LoginTests {
         System.out.println("Code executed once after Suite");
     }
 
+    @Parameters({"browser","os"})
     @BeforeTest
-    public void beforeTest(){
+    public void beforeTest(String browser,String os){
         System.out.println(" Code executed once before tests");
+        System.out.println("Browser is  :" + browser);
+        System.out.println("Operating system is : " + os);
     }
     @AfterTest
     public void afterTest(){
