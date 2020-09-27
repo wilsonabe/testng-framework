@@ -16,11 +16,15 @@ public class LoginTests {
     @Test(priority = 2,testName = "INVALID Credentials Login Test")
     public void invalidLoginTest(){
         System.out.println("Login test with invalid user name and password unsuccessful");
+        Assert.fail("This test failed");
     }
 
     @Test(priority = 3,testName = "Verify Home page")
     public void homePageTest(){
         System.out.println("Home page test ");
+        String exp = "Homepage";
+        String act = "Homepage";
+        Assert.assertTrue(exp == act,"Homepage test is valid");
     }
 
     @Test(priority = 4,testName = "Test for logout")
