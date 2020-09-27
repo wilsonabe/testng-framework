@@ -5,6 +5,25 @@ import org.testng.annotations.*;
 
 public class LoginTests {
 
+    @BeforeSuite
+    public void beforeSuite(){
+        System.out.println("Code executed once before Suite");
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        System.out.println("Code executed once after Suite");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println(" Code executed once before tests");
+    }
+    @AfterTest
+    public void afterTest(){
+        System.out.println(" Code executed once after tests");
+    }
+
     @BeforeClass
     public void beforeClass(){
         System.out.println("Method executed once before all methods");
