@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="MyShopTestSuite" verbose="1" >
+    <test name="Test in Chrome" >
+        <classes>
+            <class name="com.orphynova.demo.LoginTests" />
+            <class name="com.orphynova.demo.ShoppingTest" />
+        </classes>
+    </test>
+
+
+</suite>
