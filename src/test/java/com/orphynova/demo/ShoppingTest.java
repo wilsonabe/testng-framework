@@ -17,12 +17,12 @@ public class ShoppingTest {
     }
 
 
-    @Test
+    @Test(priority = 10)
     public void productSearch(){
         System.out.println("Searching for a product");
             }
 
-    @Test
+    @Test(priority = 20)
     public void addProducttoShoppingCart(){
         System.out.println("Product added to Shopping cart");
     }
