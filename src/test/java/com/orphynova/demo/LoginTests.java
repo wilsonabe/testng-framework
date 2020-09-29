@@ -3,6 +3,8 @@ package com.orphynova.demo;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.sql.SQLOutput;
+
 public class LoginTests {
 
     @BeforeSuite
@@ -45,10 +47,12 @@ public class LoginTests {
         System.out.println("Before Method executed prior to each test");
     }
 
-    @Test(priority = 1,testName = "VALID Credentials Login Test")
-    public void logintest(){
+    @Test(priority = 1,testName = "VALID Credentials Login Test",
+            dataProvider = "userInfo",
+             dataProviderClass = TestData.class)
+    public void logintest(String username, String password){
         System.out.println("Login with valid user name and password");
-
+        System.out.println("User name :" +username+ "  password :"+ password);
         String exp = "Hello";
         String act = "Hello";
         Assert.assertEquals(exp,act,"The strings dont match");
